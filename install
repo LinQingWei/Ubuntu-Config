@@ -1,0 +1,14 @@
+#!/bin/sh
+
+# copy bin to HOME
+cp -r ./bin ~
+
+# install terminator
+sudo add-apt-repository ppa:gnome-terminator
+sudo apt update
+sudo apt install terminator
+
+# config terminator 
+mkdir -p ~/.config/terminator/
+cp -r ./terminator ~/.config/
+cp ./.dircolors ~/
